@@ -14,6 +14,6 @@ export const Navitems = [
 
   {
     name: "Contact",
-    to: "contact",
+    to: "footer",
   },
 ];

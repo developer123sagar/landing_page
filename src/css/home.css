@@ -156,9 +156,8 @@ ul {
 }
 * { font-family: 'Open Sans', sans-serif; }
 .container { max-width: 960px; }
-.tm-handwriting-font { font-family: 'Damion', cursive; }
 .tm-top-header {
-  background: black;
+  /* background: black; */
   color: white;
 }
 .tm-site-logo,
@@ -224,7 +223,7 @@ ul {
 
 /* Welcome */
 .tm-welcome-section {
-  background: #282726;
+  background: #45120F;
   text-align: center;
 }
 .white-text { color: white; }
@@ -296,7 +295,7 @@ ul {
 /* Main content */
 .light-gray-bg { background-color: #e4e4e4; }
 .tm-main-section { padding-top: 170px; }
-.img-thumbnail { padding: 8px; }
+.img-thumbnail { padding: 0px; }
 .inline-block { display: inline-block; }
 .shadow-img {
   /* background: url(../img/shadow.png) no-repeat center bottom; */
@@ -306,7 +305,7 @@ ul {
 
 /* Footer */
 .tm-black-bg {
-  background-color: #302f2f;
+  background-color: #45120F;
   color: white;
   padding-top: 50px;
 }
@@ -355,26 +354,26 @@ ul {
   color: white;
 }
 .tm-social-icons-container { margin-top: 25px; }
-.tm-popular-item {
-  /* background: url(../img/popular-item-bg.png) no-repeat; */
+/* .tm-popular-item {
+  background: url('https://cdn.discordapp.com/attachments/1123144974683361401/1123183165922607134/plate-food-with-bowl-red-sauce-it.jpg') no-repeat;
   background-size: 100% 100%;
   max-width: 294px;
   margin-top: 30px;  
   margin-bottom: 80px;
-}
+} */
 .tm-popular-item-img { margin-left: 3px; }
 .tm-popular-items-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  /* display: -webkit-box; */
+  /* display: -webkit-flex; */
+  /* display: -ms-flexbox; */
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /* -webkit-flex-wrap: wrap; */
+      /* -ms-flex-wrap: wrap; */
+          /* flex-wrap: wrap; */
+  /* -webkit-box-pack: justify; */
+  /* -webkit-justify-content: space-between; */
+      /* -ms-flex-pack: justify; */
+          /* justify-content: space-between; */
   margin-bottom: 40px;
 }
 .tm-popular-items-container:last-child { margin-top: 15px; }
@@ -491,16 +490,6 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.tm-special-container-lower {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
 
 /* http://stackoverflow.com/questions/488830/ol-with-numbers-another-color */
 ol { counter-reset: item }
@@ -522,7 +511,6 @@ ol li:before {
           align-items: flex-end;
 }
 /*http://stackoverflow.com/questions/1032914/how-to-make-a-div-to-fill-a-remaining-horizontal-space-a-very-simple-but-annoyi*/
-.tm-section-header { width: 350px; }
 .tm-hr-container {
   width: 100%;
   height: 41px;
@@ -666,7 +654,6 @@ button.tm-more-button {
   }
   .tm-footer-div { margin-bottom: 40px; }
   .tm-special-container { display: block; }
-  .tm-special-container-left { margin-bottom: 15px; }
   .tm-special-container-lower {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
