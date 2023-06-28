@@ -1,0 +1,17 @@
+
+
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 15px;
+}
+
+.bg1{
+    background-image: url('https://cdn.discordapp.com/attachments/1123144974683361401/1123574643945656361/popup3.jpg');
+    background-repeat: no-repeat;
+}
+
+.bg2{
+    background-image: url('https://cdn.discordapp.com/attachments/1123144974683361401/1123584111622246492/popup4.jpg');
+    background-repeat: no-repeat;
+}

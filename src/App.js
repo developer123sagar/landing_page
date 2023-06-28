@@ -1,12 +1,17 @@
-import { Footer, Navbar } from "components";
-import { Home } from "pages";
+import {  Navbar, PopUp } from "components";
+import { Home, Login, Register } from "pages";
+import { Routes,Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <PopUp />
     </>
   );
 }

@@ -1,6 +1,8 @@
 import "../css/home.css";
 import "../css/bootstrap.min.css";
 import { Link } from "react-scroll";
+import { Footer } from "components";
+import video from '../video/VID-20230628-WA0013.mp4'
 
 export const Home = () => {
   return (
@@ -14,18 +16,14 @@ export const Home = () => {
         <div className="w-full h-[700px] bg-gradient-to-tr from-black absolute top-0 left-0"></div>
         <div className="absolute top-72 lg:top-56 w-full">
           <div className="w-fit ml-32 lg:ml-0 lg:w-full">
-            <h2 className="white-text font-primary tm-welcome-header">
+            <h2 className="white-text font-primary tm-welcome-header mb-10">
               &nbsp;Welcome To&nbsp;&nbsp;
             </h2>
-            <h2 className="gold-text tm-welcome-header-2">Sasurali</h2>
+            <h2 className="gold-text tm-welcome-header-2 effect mb-24">Sasurali</h2>
             <p className="w-[600px] mx-auto text-justify text-4xl font-primary md:text-2xl white-text mt-4">
               Experience Nepal's culinary magic at Sasurali Restaurant. Located
               in Dibyeshwori Planning, Pepsi-Cola, we proudly showcase the rich
-              tapestry of Nepalese cuisine. From traditional delicacies to
-              international favorites, our diverse menu will delight your taste
-              buds. Reserve your table today and join the Sasurali family for an
-              unforgettable culinary journey. Savor the taste of
-              Nepal in every bite!
+              tapestry of Nepalese cuisine.
             </p>
             <Link
               activeclassName="active"
@@ -73,13 +71,16 @@ export const Home = () => {
               </Link>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-4 tm-welcome-img-container ml-32">
-              <div className="inline-block shadow-img">
+              {/* <div className="inline-block shadow-img">
                 <img
                   src="https://cdn.discordapp.com/attachments/1123144974683361401/1123186476100882515/image-removebg-preview.png"
                   alt=""
                   className="img-circle img-thumbnail"
                 />
-              </div>
+              </div> */}
+              <video controls height={300} width={200} autoPlay >
+                <source src={video} type="video/mp4"/>
+              </video>
             </div>
           </section>
           <section className="tm-section tm-section-margin-bottom-0 row">
@@ -208,7 +209,7 @@ export const Home = () => {
                         alt="Special"
                         className="h-[300px] rounded-md"
                       />
-                      <Link>
+                      
                         <div className="tm-special-description font-primary">
                           <h3 className="mb-5 text-[30px]  md:text-3xl bold">
                             Chowmein
@@ -221,7 +222,7 @@ export const Home = () => {
                             tantalizing flavors.
                           </p>
                         </div>
-                      </Link>
+
                     </div>
                   </div>
                   <div className="tm-special-item">
@@ -258,7 +259,9 @@ export const Home = () => {
                       />
                       <Link>
                         <div className="tm-special-description font-primary">
-                          <p className="mb-5 text-[30px]  md:text-3xl bold">Thali set</p>
+                          <p className="mb-5 text-[30px]  md:text-3xl bold">
+                            Thali set
+                          </p>
                           <p className="text-[18px] md:text-2xl">
                             From the moment your Thali Set arrives at your
                             table, you are transported to a world of culinary
@@ -281,7 +284,9 @@ export const Home = () => {
                       />
                       <Link>
                         <div className="tm-special-description font-primary">
-                          <p className="mb-5 text-[30px]  md:text-3xl bold">Burger </p>
+                          <p className="mb-5 text-[30px]  md:text-3xl bold">
+                            Burger{" "}
+                          </p>
                           <p className="text-[18px] md:text-2xl">
                             At our restaurant, we take the art of burger-making
                             seriously. Each burger is crafted with meticulous
@@ -309,18 +314,19 @@ export const Home = () => {
                   Daily Menu
                 </h2>
                 <div className="w-[750px] md:w-[600px] lg:w-[800px]">
-                <div className="tm-hr-container">
-                  <hr className="tm-hr" />
+                  <div className="tm-hr-container">
+                    <hr className="tm-hr" />
+                  </div>
                 </div>
-              </div></div>
+              </div>
             </div>
             <div className="row">
               <div className="tm-daily-menu-container margin-top-60">
                 <div className="col-lg-4 col-md-4">
                   <img
-                    src="https://media.gettyimages.com/id/516182870/vector/menu-of-the-day.jpg?s=612x612&w=0&k=20&c=mergVXD8kTtuJVuK8qFpxpD_xOqGa2ywU5AAccAkWqo="
+                    src="https://cdn.discordapp.com/attachments/1123144974683361401/1123592733269970984/menu.jpg"
                     alt="Menu board"
-                    className="tm-daily-menu-img object-contain ml-5 mb-12 mr-12"
+                    className="tm-daily-menu-img object-contain h-[700px] lg:h-[310px] w-[800px] lg:ml-5 mb-12 mr-12"
                   />
                 </div>
                 <div className="p-12 mb-10">
@@ -348,8 +354,8 @@ export const Home = () => {
                     duration={500}
                   >
                     <button className="bg-primary rounded-md px-24 py-10  md:py-3 md:px-5  my-10 text-[30px] md:text-xl">
-                  Read More
-                </button>
+                      Read More
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -357,6 +363,7 @@ export const Home = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
