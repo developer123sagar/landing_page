@@ -2,51 +2,53 @@ import "../css/home.css";
 import "../css/bootstrap.min.css";
 import { Link } from "react-scroll";
 import { Footer } from "components";
-import video from '../video/VID-20230628-WA0013.mp4'
 
 export const Home = () => {
   return (
-    <div className="w-[800px] lg:w-full">
-      <section className="tm-welcome-section" id="/">
-        <img
-          src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183163854815232/interior-lounge-architecture-entertainment-relaxation.jpg"
-          alt="Table Set"
-          className="relative w-full h-[700px] object-cover"
-        />
-        <div className="w-full h-[700px] bg-gradient-to-tr from-black absolute top-0 left-0"></div>
-        <div className="absolute top-72 lg:top-56 w-full">
-          <div className="w-fit ml-32 lg:ml-0 lg:w-full">
-            <h2 className="white-text font-primary tm-welcome-header mb-10">
-              &nbsp;Welcome To&nbsp;&nbsp;
-            </h2>
-            <h2 className="gold-text tm-welcome-header-2 effect mb-24">Sasurali</h2>
-            <p className="w-[600px] mx-auto text-justify text-4xl font-primary md:text-2xl white-text mt-4">
-              Experience Nepal's culinary magic at Sasurali Restaurant. Located
-              in Dibyeshwori Planning, Pepsi-Cola, we proudly showcase the rich
-              tapestry of Nepalese cuisine.
-            </p>
-            <Link
-              activeclassName="active"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="special"
-              className="tm-more-button tm-more-button-welcome hover:cursor-pointer bg-primary text-white rounded text-[30px] md:text-2xl py-6 px-4 w-[280px] md:w-[180px]"
-            >
-              Details
-            </Link>
+    <>
+      <div className="h-full w-full font-primary">
+        <section className="tm-welcome-section" id="/">
+          <img
+            src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183163854815232/interior-lounge-architecture-entertainment-relaxation.jpg"
+            alt="Table Set"
+            className="relative w-full h-[650px] object-cover"
+          />
+          <div className="w-full h-[650px] bg-gradient-to-tr from-black absolute top-0 left-0"></div>
+          <div className="absolute top-72 lg:top-56 w-full">
+            <div className="w-full">
+              <h2 className="white-text text-4xl">
+                &nbsp;Welcome To&nbsp;&nbsp;
+              </h2>
+              <h2 className="text-slate-50 text-[60px] effect mt-12">
+                Sasurali
+              </h2>
+              <p className="w-full lg:w-[500px] lg:mx-auto text-lg font-primary md:text-2xl white-text mt-20">
+                Experience Nepal's culinary magic at Sasurali Restaurant.
+                Located in Dibyeshwori Planning, Pepsi-Cola, we proudly showcase
+                the rich tapestry of Nepalese cuisine.
+              </p>
+              <Link
+                activeclassName="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="special"
+              >
+                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-20">
+                  Details
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-      <div className="tm-main-section light-gray-bg">
-        <div className="container">
-          <section className="tm-section row">
-            <div className="col-lg-9 col-md-9 col-sm-8 w-fit">
-              <h2 className="tm-section-header gold-text text-[40px] md:text-[30px] w-[725px] mb-4">
+        </section>
+        <div className="tm-main-section light-gray-bg px-5">
+          <section className="flex flex-col lg:flex-row gap-16 lg:gap-5">
+            <div className="basis-full lg:basis-[65%]">
+              <h2 className="text-4xl font-bold w-full mb-4">
                 Sasurali's Flavors of Nepal: A Feast for the Senses
               </h2>
-              <p className="tm-welcome-description text-[26px] md:text-xl w-[725px]">
+              <p className="text-justify text-xl lg:text-2xl w-full">
                 Indulge in a sensory feast at Sasurali's Flavors of Nepal, where
                 each dish tells a tale of Nepali heritage and passion. From
                 vibrant spices to tantalizing textures, our culinary offerings
@@ -65,39 +67,40 @@ export const Home = () => {
                 offset={-70}
                 duration={500}
               >
-                <button className="bg-primary rounded-md px-24 py-10  md:py-3 md:px-5  my-10 text-[30px] md:text-xl">
+                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-12">
                   Read More
                 </button>
               </Link>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4 tm-welcome-img-container ml-32">
-              {/* <div className="inline-block shadow-img">
+            <div className="basis-full lg:basis-[35%]">
+              <div className="inline-block shadow-img">
                 <img
                   src="https://cdn.discordapp.com/attachments/1123144974683361401/1123186476100882515/image-removebg-preview.png"
                   alt=""
-                  className="img-circle img-thumbnail"
+                  className="img-circle"
                 />
-              </div> */}
-              <video controls height={300} width={200} autoPlay >
-                <source src={video} type="video/mp4"/>
-              </video>
+              </div>
             </div>
           </section>
-          <section className="tm-section tm-section-margin-bottom-0 row">
+
+          {/* popular items */}
+          <section className="tm-section tm-section-margin-bottom-0 row mt-10 px-5">
             <div className="col-lg-12 tm-section-header-container">
-              <h2 className="gold-text w-full md:w-[150px] mb-12 font-primary font-bold text-[35px] md:text-2xl">
+              <h2 className="w-full mb-2 lg:mb-12 lg:w-[200px] font-primary font-bold text-3xl">
                 Popular Items
               </h2>
               <div className="tm-hr-container">
                 <hr className="tm-hr" />
               </div>
             </div>
-            <div className="col-lg-12 tm-popular-items-container">
-              <div className=" bg-white rounded-2xl w-[370px] md:w-[300px] mb-32">
+
+            {/* each popular item (3) */}
+            <div className="flex justify-around flex-wrap w-full">
+              <div className=" bg-white rounded-2xl w-full md:w-[400px] mb-[7rem]">
                 <img
                   src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183165922607134/plate-food-with-bowl-red-sauce-it.jpg"
                   alt="Popular"
-                  className="tm-popular-item- overflow-hidden rounded-2xl w-full h-[295px]"
+                  className="tm-popular-item- overflow-hidden rounded-2xl w-fit mx-auto h-[200px]"
                 />
                 <div className="tm-popular-item-description">
                   <h3 className="tm-handwriting-font tm-popular-item-title">
@@ -107,13 +110,13 @@ export const Home = () => {
                     omo
                   </h3>
                   <hr className="tm-popular-item-hr" />
-                  <p className="text-[25px] md:text-[16px] md:mt-10 font-primary">
+                  <p className="text-2xl md:mt-10 font-primary">
                     Momo lovers rejoice! Get ready to tantalize your taste buds
                     with the exquisite flavors of momos. Hailing from the
                     Himalayan regions, momos have captured the hearts and
                     palates of food enthusiasts worldwide.
                   </p>
-                  <div className="order-now-container">
+                  <div className="order-now-container mt-10 ml-[4.5rem] lg:ml-20">
                     <a
                       href
                       className="order-now-link tm-handwriting-font hover:cursor-pointer"
@@ -124,11 +127,11 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl w-[370px] md:w-[300px] mb-32">
+              <div className="bg-white rounded-2xl w-ful md:w-[400px] mb-[7rem]">
                 <img
                   src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183166677602304/burger-with-flying-elements.jpg"
                   alt="Popular"
-                  className="tm-popular-item- overflow-hidden rounded-2xl w-full h-[295px] object-contain"
+                  className="tm-popular-item- overflow-hidden rounded-2xl w-fit h-[200px] object-contain mx-auto"
                 />
                 <div className="tm-popular-item-description">
                   <h3 className="tm-handwriting-font tm-popular-item-title">
@@ -138,13 +141,13 @@ export const Home = () => {
                     urger
                   </h3>
                   <hr className="tm-popular-item-hr" />
-                  <p className="text-[25px] md:text-[16px] md:mt-10 font-primary text-left">
+                  <p className="text-2xl md:mt-10 font-primary">
                     Get ready to sink your teeth into pure bliss with our
                     mouthwatering burgers. We proudly present a culinary
                     masterpiece that has stood the test of time and continues to
                     captivate taste buds everywhere
                   </p>
-                  <div className="order-now-container">
+                  <div className="order-now-container mt-10 ml-[4.5rem] lg:ml-20">
                     <a
                       href
                       className="order-now-link tm-handwriting-font hover:cursor-pointer"
@@ -154,11 +157,11 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl w-[370px] md:w-[300px] mb-32">
+              <div className="bg-white rounded-2xl w-full md:w-[400px] mb-[7rem]">
                 <img
                   src="https://cdn.discordapp.com/attachments/1123144974683361401/1123184299340992573/red-martini-cocktail-with-splash-lime-isolated.jpg"
                   alt="Popular"
-                  className="tm-popular-item- overflow-hidden rounded-2xl w-full h-[295px] object-contain"
+                  className="tm-popular-item- overflow-hidden rounded-2xl w-fit mx-auto h-[200px]"
                 />
                 <div className="tm-popular-item-description">
                   <h3 className="tm-handwriting-font tm-popular-item-title">
@@ -168,14 +171,14 @@ export const Home = () => {
                     ocktail
                   </h3>
                   <hr className="tm-popular-item-hr" />
-                  <p className="text-[25px] md:text-[16px] md:mt-10 font-primary text-left">
+                  <p className="text-2xl md:mt-10 font-primary">
                     Step into a world of delightful refreshment with our
                     exquisite mocktails. These non-alcoholic wonders are
                     carefully crafted to tantalize your taste buds and
                     invigorate, offering a vibrant and flavorful experience like
                     no other.
                   </p>
-                  <div className="order-now-container">
+                  <div className="order-now-container mt-10 ml-[4.5rem] lg:ml-20">
                     <a
                       href
                       className="order-now-link tm-handwriting-font hover:cursor-pointer"
@@ -187,156 +190,141 @@ export const Home = () => {
               </div>
             </div>
           </section>
+
+          {/* special items */}
           <section
-            className="tm-section tm-section-margin-bottom-0 row"
+            className="tm-section tm-section-margin-bottom-0 row mt-10 px-5"
             id="special"
           >
             <div className="col-lg-12 tm-section-header-container">
-              <h2 className="gold-text w-full md:w-[150px] mb-12 font-primary font-bold text-[35px] md:text-2xl">
+              <h2 className="w-full mb-2 lg:mb-12 lg:w-[200px] font-primary font-bold text-3xl">
                 Today's Special
               </h2>
               <div className="tm-hr-container">
                 <hr className="tm-hr" />
               </div>
             </div>
-            <div className="col-lg-12 tm-popular-items-container">
-              <div className="tm-special-container-right mx-auto">
-                <div className="w-full flex justify-between bg-white mb-5">
-                  <div className="tm-special-item">
-                    <div className="tm-special-img-container">
-                      <img
-                        src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183165171830884/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai.jpg"
-                        alt="Special"
-                        className="h-[300px] rounded-md"
-                      />
-                      
-                        <div className="tm-special-description font-primary">
-                          <h3 className="mb-5 text-[30px]  md:text-3xl bold">
-                            Chowmein
-                          </h3>
-                          <p className="text-[18px] md:text-2xl">
-                            Prepare to embark on a culinary journey that will
-                            awaken your senses and leave you craving more.
-                            Introducing Chowmein, a beloved dish that combines
-                            the simplicity of noodles with a burst of
-                            tantalizing flavors.
-                          </p>
-                        </div>
-
-                    </div>
-                  </div>
-                  <div className="tm-special-item">
-                    <div className="tm-special-img-container">
-                      <img
-                        src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183165171830884/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai.jpg"
-                        alt="Special"
-                        className="h-[300px] rounded-md"
-                      />
-                      <Link>
-                        <div className="tm-special-description font-primary">
-                          <h3 className="mb-5 text-[30px]  md:text-3xl bold">
-                            Chowmein
-                          </h3>
-                          <p className="text-[18px] md:text-2xl">
-                            Prepare to embark on a culinary journey that will
-                            awaken your senses and leave you craving more.
-                            Introducing Chowmein, a beloved dish that combines
-                            the simplicity of noodles with a burst of
-                            tantalizing flavors.
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+            <div className="w-full">
+              <div className="w-full grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 mb-5">
+                <div className="tm-special-item">
+                  <div className="tm-special-img-container">
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183165171830884/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai.jpg"
+                      alt="Special"
+                      className="h-[300px] rounded-md"
+                    />
+                    <Link>
+                      <div className="tm-special-description font-primary">
+                        <h3 className="mb-5 text-3xl lg:text-4xl bold">
+                          Chowmein
+                        </h3>
+                        <p className="text-xl">
+                          Prepare to embark on a culinary journey that will
+                          awaken your senses and leave you craving more.
+                          Introducing Chowmein, a beloved dish that combines the
+                          simplicity of noodles with a burst of tantalizing
+                          flavors.
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
-                <div className="tm-special-container-lower flex gap-5">
-                  <div className="tm-special-item rounded-md">
-                    <div className="tm-special-img-container">
-                      <img
-                        src="https://cdn.discordapp.com/attachments/1123144974683361401/1123186476100882515/image-removebg-preview.png"
-                        alt="Special"
-                        className="h-[400px] w-full"
-                      />
-                      <Link>
-                        <div className="tm-special-description font-primary">
-                          <p className="mb-5 text-[30px]  md:text-3xl bold">
-                            Thali set
-                          </p>
-                          <p className="text-[18px] md:text-2xl">
-                            From the moment your Thali Set arrives at your
-                            table, you are transported to a world of culinary
-                            delights. The platter is adorned with an array of
-                            small bowls, each holding a distinct delicacy.
-                            Whether you're a fan of aromatic curries, fragrant
-                            rice, crispy papadums, or tangy chutneys, our Thali
-                            Set has something to satisfy every palate.
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+                <div className="tm-special-item">
+                  <div className="tm-special-img-container">
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1123144974683361401/1123183165171830884/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai.jpg"
+                      alt="Special"
+                      className="h-[300px] rounded-md"
+                    />
+                    <Link>
+                      <div className="tm-special-description font-primary">
+                        <h3 className="mb-5 text-3xl lg:text-4xl bold">
+                          Chowmein
+                        </h3>
+                        <p className="text-xl">
+                          Prepare to embark on a culinary journey that will
+                          awaken your senses and leave you craving more.
+                          Introducing Chowmein, a beloved dish that combines the
+                          simplicity of noodles with a burst of tantalizing
+                          flavors.
+                        </p>
+                      </div>
+                    </Link>
                   </div>
-                  <div className="tm-special-item rounded-md">
-                    <div className="tm-special-img-container">
-                      <img
-                        src="https://cdn.discordapp.com/attachments/1123144974683361401/1123196028393365567/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon-removebg-preview.png"
-                        alt="Special"
-                        className="h-[400px] w-full"
-                      />
-                      <Link>
-                        <div className="tm-special-description font-primary">
-                          <p className="mb-5 text-[30px]  md:text-3xl bold">
-                            Burger{" "}
-                          </p>
-                          <p className="text-[18px] md:text-2xl">
-                            At our restaurant, we take the art of burger-making
-                            seriously. Each burger is crafted with meticulous
-                            care and passion, ensuring a symphony of flavors in
-                            every bite. From the moment you sink your teeth into
-                            our juicy, flame-grilled patty, you'll understand
-                            why burgers have become an icon of culinary
-                            perfection.
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+                </div>
+              </div>
+              <div className="flex mx-auto w-fit gap-5">
+                <div className="tm-special-item rounded-md">
+                  <div className="tm-special-img-container">
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1123144974683361401/1123186476100882515/image-removebg-preview.png"
+                      alt="Special"
+                      className="h-[300px] rounded-md"
+                    />
+                    <Link>
+                      <div className="tm-special-description font-primary">
+                        <p className="mb-5 text-2xl lg:text-4xl bold">
+                          Thali set
+                        </p>
+                        <p className="text-base">
+                          From the moment your Thali Set arrives at your table,
+                          you are transported to a world of culinary delights.
+                          The platter is adorned with an array of small bowls.
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div className="tm-special-item rounded-md">
+                  <div className="tm-special-img-container">
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1123144974683361401/1123196028393365567/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon-removebg-preview.png"
+                      alt="Special"
+                      className="h-[300px] rounded-md"
+                    />
+                    <Link>
+                      <div className="tm-special-description font-primary">
+                        <p className="mb-5 text-2xl lg:text-4xl bold">Burger</p>
+                        <p className="text-base lg:text-xl">
+                          At our restaurant, we take the art of burger-making
+                          seriously. Each burger is crafted with meticulous care
+                          and passion, ensuring a symphony of flavors in every
+                          bite.
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
+          {/* menu */}
           <section
-            className="tm-section tm-section-margin-bottom-0 row"
+            className="tm-section tm-section-margin-bottom-0 row mt-20 px-5"
             id="menu"
           >
             <div className="col-lg-12 tm-section-header-container">
-              <div className="col-lg-12 tm-section-header-container">
-                <h2 className="gold-text w-full md:w-[150px] mb-12 font-primary font-bold text-[35px] md:text-2xl">
-                  Daily Menu
-                </h2>
-                <div className="w-[750px] md:w-[600px] lg:w-[800px]">
-                  <div className="tm-hr-container">
-                    <hr className="tm-hr" />
-                  </div>
-                </div>
+              <h2 className="w-full mb-2 lg:mb-12 lg:w-[200px] font-primary font-bold text-3xl">
+                Daily Menu
+              </h2>
+              <div className="tm-hr-container">
+                <hr className="tm-hr" />
               </div>
             </div>
-            <div className="row">
-              <div className="tm-daily-menu-container margin-top-60">
-                <div className="col-lg-4 col-md-4">
-                  <img
-                    src="https://cdn.discordapp.com/attachments/1123144974683361401/1123592733269970984/menu.jpg"
-                    alt="Menu board"
-                    className="tm-daily-menu-img object-contain h-[700px] lg:h-[310px] w-[800px] lg:ml-5 mb-12 mr-12"
-                  />
-                </div>
-                <div className="p-12 mb-10">
-                  <p className="text-[28px] md:text-2xl lg:ml-10">
+            <div className="w-full">
+              <div className="flex flex-wrap w-full">
+                <img
+                  src="https://media.gettyimages.com/id/516182870/vector/menu-of-the-day.jpg?s=612x612&w=0&k=20&c=mergVXD8kTtuJVuK8qFpxpD_xOqGa2ywU5AAccAkWqo="
+                  alt="Menu board"
+                  className="w-[400px] h-[300px] object-contain"
+                />
+                <div className="mt-10 lg:mt-0">
+                  <p className="text-2xl font-bold">
                     Phasellus viverra nulla ut metus varius laoreet. Quisque
                     rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-                    Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                    rhoncus.
                   </p>
-                  <ol className="my-5 text-[26px] md:text-xl">
+                  <ol className="my-5 text-xl">
                     <li>Tellus eget condimentum rhoncus.</li>
                     <li>Sem quam semper libero.</li>
                     <li>Sit amet adipiscing sem neque sed ipsum.</li>
@@ -353,7 +341,7 @@ export const Home = () => {
                     offset={-70}
                     duration={500}
                   >
-                    <button className="bg-primary rounded-md px-24 py-10  md:py-3 md:px-5  my-10 text-[30px] md:text-xl">
+                    <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-20">
                       Read More
                     </button>
                   </Link>
@@ -364,6 +352,6 @@ export const Home = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };

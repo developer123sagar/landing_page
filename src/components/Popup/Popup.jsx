@@ -12,13 +12,15 @@ function PopUp() {
     <div>
       <div>
         {popup ? (
-          <div className="h-full w-full absolute top-0 ">
-            <div className='bg2 md:bg1 h-[950px] lg:h-[400px] lg:w-[50%] w-[700px]  absolute top-[16rem] left-[6rem] lg:top-[14rem] lg:left-[30rem] rounded-xl p-4'>
+          <div className="h-full w-full mt-40 px-2 font-primary z-20">
+            <div className="relative bg2 md:bg1 h-[430px] w-full lg:w-[900px] lg:mx-auto rounded p-4 lg:p-0 h">
               <div className="popup-header">
-                <h1>&nbsp;</h1>
-                <h1 className="hover:cursor-pointer py-4" onClick={closePopup}>
-                  <RxCross1 color="gray" className="w-28 h-24 lg:h-12" />
-                </h1>
+                <RxCross1
+                  onClick={closePopup}
+                  color="blue"
+                  className="absolute top-0 right-2 lg:-right-12 font-bold hover:cursor-pointer py-1 lg:mr-52"
+                  size={30}
+                />
               </div>
               <div>
                 <Link
@@ -30,9 +32,7 @@ function PopUp() {
                   duration={500}
                   onClick={closePopup}
                 >
-                  <button className="lg:w-[180px] w-[243px] text-[25px] md:text-2xl px-2 py-4 bg-primary rounded-[30px] absolute top-[83rem] left-[24rem] lg:top-[31.5rem] lg:left-[45rem] font-bold">
-                    GRAB NOW !
-                  </button>
+                  <button className="bg-primary px-10 py-4 rounded-[30px] text-white absolute bottom-12 left-14 lg:left-72">GRAB NOW !</button>
                 </Link>
               </div>
             </div>
