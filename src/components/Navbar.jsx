@@ -1,6 +1,6 @@
 import { Navitems } from "constant/Navbar/text";
 import { FiUser, FiSearch } from "react-icons/fi";
-import { HiShoppingCart } from "react-icons/hi";
+import { HiMenu, HiShoppingCart } from "react-icons/hi";
 import { Link } from "react-scroll";
 
 export const Navbar = () => {
@@ -31,10 +31,12 @@ export const Navbar = () => {
 
       {/* navicons */}
       <div className="flex justify-between basis-[13%]">
-        <FiSearch size={25} />
-        <HiShoppingCart size={25} />
-        <FiUser size={25} />
+        <FiSearch className="hidden md:block" size={25} />
+        <HiShoppingCart className="hidden md:block" size={25} />
+        <FiUser className="hidden md:block" size={25} />
       </div>
+        <FiUser className="md:hidden" size={60} />
+      <HiMenu className="lg:hidden h-36 w-28 md:h-32 md:w-12" />
     </div>
   );
 };
