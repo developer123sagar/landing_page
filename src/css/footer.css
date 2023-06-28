@@ -95,7 +95,6 @@
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
-/* .tm-popular-item:hover { background-image: url(../img/popular-item-bg-hover.png); } */
 .tm-popular-item:hover .tm-popular-item-title { color: #c79c60; }
 .tm-popular-item:hover hr {
   border-color: #c79c60;
@@ -268,7 +267,7 @@ ol li:before {
     margin-top: 30px;
     text-align: left; 
   }
-  .tm-header-line { width: 44px; }
+  /* .tm-header-line { width: 44px; } */
   .tm-main-section { padding-top: 130px; }
   .tm-section-header-container { 
     -webkit-box-align: start; 
