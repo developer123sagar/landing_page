@@ -4,11 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@300&display=swap');
 
-.h{
+.h {
     border: 1px solid red;
 }
 
-.nav::after{
+.nav::after {
     content: "";
     width: 0;
     height: 1px;
@@ -18,15 +18,19 @@
     bottom: 0px;
     transition: 0.5s;
 }
-.nav:hover::after{
+
+.nav:hover::after {
     width: 100%;
 }
-.nav{
+
+.nav {
     position: relative;
 }
-.nav:hover{
+
+.nav:hover {
     color: hsl(39, 96%, 51%);
 }
+
 ::-webkit-scrollbar {
     width: 3px;
 }
@@ -38,4 +42,17 @@
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.753);
+}
+
+
+/* navbar and button background */
+.background {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(219, 151, 151, 1) 0%, rgba(69, 18, 15, 1) 55%, rgba(69, 18, 15, 1) 100%);
+}
+
+/* drawer bg */
+.drawerBg{
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(151,219,205,1) 0%, rgba(118,139,198,1) 55%, rgba(206,148,224,1) 100%);
 }

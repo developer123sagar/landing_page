@@ -9,11 +9,11 @@ function PopUp() {
     setPop(false);
   };
   return (
-    <div>
+
       <div>
         {popup ? (
-          <div className="h-full w-full mt-40 px-2 font-primary z-20">
-            <div className="relative bg2 md:bg1 h-[430px] w-full lg:w-[900px] lg:mx-auto rounded p-4 lg:p-0 h">
+          <div className="h-full w-full absolute top-44 left-0 z-10  px-2 font-primary ">
+            <div className="relative bg2 md:bg1 h-[430px] w-full lg:w-[900px] lg:mx-auto rounded p-4 lg:p-0">
               <div className="popup-header">
                 <RxCross1
                   onClick={closePopup}
@@ -32,7 +32,7 @@ function PopUp() {
                   duration={500}
                   onClick={closePopup}
                 >
-                  <button className="bg-primary px-10 py-4 rounded-[30px] text-white absolute bottom-12 left-14 lg:left-72">GRAB NOW !</button>
+                  <button className="bg-primary px-10 py-4 rounded-[30px] text-white absolute bottom-28 left-48 lg:left-[40rem]">GRAB NOW !</button>
                 </Link>
               </div>
             </div>
@@ -41,7 +41,7 @@ function PopUp() {
           ""
         )}
       </div>
-    </div>
+  
   );
 }
 export default PopUp;

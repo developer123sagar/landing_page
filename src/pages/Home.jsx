@@ -1,11 +1,18 @@
 import "../css/home.css";
 import "../css/bootstrap.min.css";
 import { Link } from "react-scroll";
-import { Footer } from "components";
+import { CarouselUI, Footer, PopUp } from "components";
+
+const slideImages = [
+  "https://cdn.discordapp.com/attachments/1123144974683361401/1123920848013766776/menu1.jpg",
+  "https://cdn.discordapp.com/attachments/1123144974683361401/1123920974463643749/menu3.jpg",
+  "https://cdn.discordapp.com/attachments/1123144974683361401/1123921092021600348/menu4.jpg",
+];
 
 export const Home = () => {
   return (
     <>
+      <PopUp />
       <div className="h-full w-full font-primary">
         <section className="tm-welcome-section" id="/">
           <img
@@ -35,15 +42,15 @@ export const Home = () => {
                 duration={500}
                 to="special"
               >
-                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-20">
+                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-lg text-xl md:text-2xl py-6 px-20">
                   Details
                 </button>
               </Link>
             </div>
           </div>
         </section>
-        <div className="tm-main-section light-gray-bg px-5">
-          <section className="flex flex-col lg:flex-row gap-16 lg:gap-5">
+        <div className="pt-10 light-gray-bg px-5">
+          <section className="flex flex-col lg:flex-row gap-16 lg:gap-10">
             <div className="basis-full lg:basis-[65%]">
               <h2 className="text-4xl font-bold w-full mb-4">
                 Sasurali's Flavors of Nepal: A Feast for the Senses
@@ -67,19 +74,15 @@ export const Home = () => {
                 offset={-70}
                 duration={500}
               >
-                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-12">
+                <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-lg text-xl md:text-2xl py-6 px-12">
                   Read More
                 </button>
               </Link>
             </div>
             <div className="basis-full lg:basis-[35%]">
-              <div className="inline-block shadow-img">
-                <img
-                  src="https://cdn.discordapp.com/attachments/1123144974683361401/1123186476100882515/image-removebg-preview.png"
-                  alt=""
-                  className="img-circle"
-                />
-              </div>
+              <video width={120} height={50} controls autoPlay>
+                <source src="/videos/sasuralivid.mp4" type="video/mp4" />
+              </video>
             </div>
           </section>
 
@@ -301,7 +304,7 @@ export const Home = () => {
 
           {/* menu */}
           <section
-            className="tm-section tm-section-margin-bottom-0 row mt-20 px-5"
+            className="tm-section tm-section-margin-bottom-0 row mt-20 px-5 py-10"
             id="menu"
           >
             <div className="col-lg-12 tm-section-header-container">
@@ -312,25 +315,20 @@ export const Home = () => {
                 <hr className="tm-hr" />
               </div>
             </div>
-            <div className="w-full">
-              <div className="flex flex-wrap w-full">
-                <img
-                  src="https://media.gettyimages.com/id/516182870/vector/menu-of-the-day.jpg?s=612x612&w=0&k=20&c=mergVXD8kTtuJVuK8qFpxpD_xOqGa2ywU5AAccAkWqo="
-                  alt="Menu board"
-                  className="w-[400px] h-[300px] object-contain"
-                />
+            <div className="w-full px-5">
+              <div className="flex flex-wrap lg:flex-nowrap lg:gap-52 w-full">
+                <CarouselUI slideImages={slideImages} width={'500px'} indicator={true} status={true} />
                 <div className="mt-10 lg:mt-0">
-                  <p className="text-2xl font-bold">
-                    Phasellus viverra nulla ut metus varius laoreet. Quisque
-                    rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+                  <p className="text-4xl font-bold">
+                    Delight your Taste Buds with our Exquisite Menu!
                   </p>
-                  <ol className="my-5 text-xl">
-                    <li>Tellus eget condimentum rhoncus.</li>
-                    <li>Sem quam semper libero.</li>
-                    <li>Sit amet adipiscing sem neque sed ipsum.</li>
-                    <li>Nam quam nunc, blandit vel, luctus pulvinar.</li>
-                    <li>Maecenas nec odio et ante tincidunt tempus.</li>
-                    <li>Donec vitae sapien ut libero ventenatis faucibus.</li>
+                  <ol className="my-5 text-3xl font-bold">
+                    <li className="my-10">Momo</li>
+                    <li className="mb-10">Chowmein</li>
+                    <li className="mb-10">Thali set</li>
+                    <li className="mb-10">Soft and Hard Drinks</li>
+                    <li className="mb-10">Hukka</li>
+                    <li className="mb-10">Ice Cream</li>
                   </ol>
                   <Link
                     classNameName="hover:cursor-pointer"
@@ -341,8 +339,8 @@ export const Home = () => {
                     offset={-70}
                     duration={500}
                   >
-                    <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-[60px] hover:rounded-lg text-xl md:text-2xl py-6 px-20">
-                      Read More
+                    <button className="hover:cursor-pointer mt-10 bg-primary hover:bg-violet-500 transition-all text-white rounded-lg text-xl md:text-2xl py-6 px-20">
+                      See More
                     </button>
                   </Link>
                 </div>

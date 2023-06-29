@@ -5,7 +5,7 @@ import "../css/bootstrap.min.css";
 
 export const Footer = () => {
   return (
-    <div className="w-full mt-16" id="footer">
+    <div className="w-full h-full" id="footer">
       <div className="tm-black-bg font-primary">
         <div className="container">
           <div className="row margin-bottom-60">
